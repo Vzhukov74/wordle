@@ -10,7 +10,7 @@ import Foundation
 final class RidleProvider {
     func fetch(completion: @escaping (_ ridle: Ridle?) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-            completion(Ridle.create(for: "ПРИВЕТ", availableUntil: ""))
+            completion(Ridle.defaultRiddle())
         }
     }
 }

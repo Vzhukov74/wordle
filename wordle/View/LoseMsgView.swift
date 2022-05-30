@@ -8,22 +8,28 @@
 import SwiftUI
 
 struct LoseMsgView: View {
-    var onNewGame: () -> Void
+    let word: String
+    let onNewGame: () -> Void
     
     var body: some View {
-        VStack(spacing: 12) {
-            Text("Упс, вы исчерпали все попыки!")
-                .font(Font.title2)
-                .padding()
+        VStack(spacing: 8) {
+            Text(word)
+                .font(Font.title)
+                .padding(.top, 12)
+            Text("Упс, вы исчерпали все попытки!")
+                .font(Font.subheadline)
+                .padding(.horizontal, 16)
             Button(action: onNewGame) {
-                Text("Продолжить отгадывать!")
+                Text("Продолжить")
                     .font(Font.headline)
                     .foregroundColor(Color.white)
-                    .padding()
+                    .padding(.horizontal, 16)
             }
-                .background(Color.red)
+                .frame(height: 44)
+                .background(Color.green)
                 .cornerRadius(24)
-                .padding()
+                .padding(.top, 16)
+                .padding(.bottom, 16)
         }
             .background(Color.white)
             .cornerRadius(8)
@@ -33,7 +39,7 @@ struct LoseMsgView: View {
 
 struct LoseMsgView_Previews: PreviewProvider {
     static var previews: some View {
-        LoseMsgView(onNewGame: {})
+        LoseMsgView(word: "Привет", onNewGame: {})
             .previewLayout(.sizeThatFits)
     }
 }

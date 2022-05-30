@@ -12,19 +12,22 @@ struct WinMsgView: View {
     var onNewGame: () -> Void
     
     var body: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: 8) {
             Text("Ура, слово отгадано!")
-                .font(Font.title2)
-                .padding()
+                .font(Font.title3)
+                .padding(.top, 12)
+                .padding(.horizontal, 16)
             Button(action: onNewGame) {
-                Text("Продолжить отгадывать!")
+                Text("Продолжить")
                     .font(Font.headline)
                     .foregroundColor(Color.white)
-                    .padding()
+                    .padding(.horizontal, 16)
             }
+                .frame(height: 44)
                 .background(Color.green)
                 .cornerRadius(24)
-                .padding()
+                .padding(.top, 16)
+                .padding(.bottom, 16)
         }
             .background(Color.white)
             .cornerRadius(8)

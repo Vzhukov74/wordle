@@ -16,6 +16,8 @@ struct WordView: View {
                 CharView(char: word.chars[index])
             }
         }
+            .modifier(Shake(animatableData: CGFloat(word.wrongAnswerCounter)))
+            .animation(.default, value: word.wrongAnswerCounter)
     }
 }
 

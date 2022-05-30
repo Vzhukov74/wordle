@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		57335F1127C51F3B0045ED5B /* CharView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57335F1027C51F3B0045ED5B /* CharView.swift */; };
+		5764BAF4281AD9230070A370 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5764BAF3281AD9230070A370 /* Shake.swift */; };
+		576B11282844DB100051F59A /* WaitingForNewRidleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B11272844DB100051F59A /* WaitingForNewRidleView.swift */; };
+		576B112B2845011F0051F59A /* HalfTransparentBg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B112A2845011F0051F59A /* HalfTransparentBg.swift */; };
+		576B112F284503AB0051F59A /* WaitingForNewRidleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B112E284503AB0051F59A /* WaitingForNewRidleViewModel.swift */; };
 		5774A67F27A040FA00C0A64F /* wordleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5774A67E27A040FA00C0A64F /* wordleApp.swift */; };
 		5774A68127A040FA00C0A64F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5774A68027A040FA00C0A64F /* GameView.swift */; };
 		5774A68327A040FD00C0A64F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5774A68227A040FD00C0A64F /* Assets.xcassets */; };
@@ -31,6 +35,10 @@
 
 /* Begin PBXFileReference section */
 		57335F1027C51F3B0045ED5B /* CharView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharView.swift; sourceTree = "<group>"; };
+		5764BAF3281AD9230070A370 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
+		576B11272844DB100051F59A /* WaitingForNewRidleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingForNewRidleView.swift; sourceTree = "<group>"; };
+		576B112A2845011F0051F59A /* HalfTransparentBg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfTransparentBg.swift; sourceTree = "<group>"; };
+		576B112E284503AB0051F59A /* WaitingForNewRidleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingForNewRidleViewModel.swift; sourceTree = "<group>"; };
 		5774A67B27A040FA00C0A64F /* wordle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wordle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5774A67E27A040FA00C0A64F /* wordleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordleApp.swift; sourceTree = "<group>"; };
 		5774A68027A040FA00C0A64F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -64,6 +72,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5764BAF2281AD9100070A370 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5764BAF3281AD9230070A370 /* Shake.swift */,
+				576B112A2845011F0051F59A /* HalfTransparentBg.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		576B11292844FBB50051F59A /* Shimmers */ = {
+			isa = PBXGroup;
+			children = (
+				57B6BA6227CE59FF00707184 /* ShimmerView.swift */,
+				57B6BA6427CE5A8400707184 /* BoardShimmerView.swift */,
+				57B6BA6627CE5B0800707184 /* KeyboardShimmerView.swift */,
+			);
+			path = Shimmers;
+			sourceTree = "<group>";
+		};
+		576B112D2845039A0051F59A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				57B6BA5527C5289D00707184 /* GameViewModel.swift */,
+				576B112E284503AB0051F59A /* WaitingForNewRidleViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		5774A67227A040FA00C0A64F = {
 			isa = PBXGroup;
 			children = (
@@ -83,14 +119,14 @@
 		5774A67D27A040FA00C0A64F /* wordle */ = {
 			isa = PBXGroup;
 			children = (
+				576B112D2845039A0051F59A /* ViewModels */,
+				5764BAF2281AD9100070A370 /* Common */,
 				57B6BA5F27CE58A100707184 /* Services */,
 				5774A67E27A040FA00C0A64F /* wordleApp.swift */,
-				5774A68027A040FA00C0A64F /* GameView.swift */,
 				5774A68227A040FD00C0A64F /* Assets.xcassets */,
 				5774A68427A040FD00C0A64F /* Preview Content */,
 				57B6BA5227C5251600707184 /* View */,
 				57B6BA4D27C522DA00707184 /* Models */,
-				57B6BA5527C5289D00707184 /* GameViewModel.swift */,
 			);
 			path = wordle;
 			sourceTree = "<group>";
@@ -118,15 +154,15 @@
 		57B6BA5227C5251600707184 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5774A68027A040FA00C0A64F /* GameView.swift */,
+				576B11292844FBB50051F59A /* Shimmers */,
 				5774A68E27A1991000C0A64F /* KeyboardView.swift */,
 				57F40D2527B2B31900280C74 /* BoardView.swift */,
 				5774A68C27A04EFD00C0A64F /* WordView.swift */,
 				57335F1027C51F3B0045ED5B /* CharView.swift */,
 				57B6BA5B27CE4C7B00707184 /* WinMsgView.swift */,
 				57B6BA5D27CE4C8800707184 /* LoseMsgView.swift */,
-				57B6BA6227CE59FF00707184 /* ShimmerView.swift */,
-				57B6BA6427CE5A8400707184 /* BoardShimmerView.swift */,
-				57B6BA6627CE5B0800707184 /* KeyboardShimmerView.swift */,
+				576B11272844DB100051F59A /* WaitingForNewRidleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,10 +245,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				576B112B2845011F0051F59A /* HalfTransparentBg.swift in Sources */,
 				5774A68127A040FA00C0A64F /* GameView.swift in Sources */,
 				57B6BA5A27C7995F00707184 /* Keys.swift in Sources */,
 				57B6BA5127C5239800707184 /* Word.swift in Sources */,
 				57B6BA4F27C522ED00707184 /* Char.swift in Sources */,
+				576B11282844DB100051F59A /* WaitingForNewRidleView.swift in Sources */,
 				5774A68F27A1991000C0A64F /* KeyboardView.swift in Sources */,
 				57B6BA5E27CE4C8800707184 /* LoseMsgView.swift in Sources */,
 				57B6BA5827C7994100707184 /* KeysRow.swift in Sources */,
@@ -224,7 +262,9 @@
 				5774A67F27A040FA00C0A64F /* wordleApp.swift in Sources */,
 				57B6BA6327CE59FF00707184 /* ShimmerView.swift in Sources */,
 				57335F1127C51F3B0045ED5B /* CharView.swift in Sources */,
+				5764BAF4281AD9230070A370 /* Shake.swift in Sources */,
 				57B6BA5627C5289D00707184 /* GameViewModel.swift in Sources */,
+				576B112F284503AB0051F59A /* WaitingForNewRidleViewModel.swift in Sources */,
 				57B6BA6527CE5A8400707184 /* BoardShimmerView.swift in Sources */,
 				5774A68D27A04EFD00C0A64F /* WordView.swift in Sources */,
 			);
@@ -364,6 +404,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -392,6 +433,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

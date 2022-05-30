@@ -20,7 +20,7 @@ struct CharView: View {
                 )
             
             Text(char.title)
-                .foregroundColor(Color.blue)
+                .foregroundColor(Color.black)
         }
             .aspectRatio(1, contentMode: .fit)
     }
