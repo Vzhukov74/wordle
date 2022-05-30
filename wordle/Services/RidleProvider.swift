@@ -8,9 +8,12 @@
 import Foundation
 
 final class RidleProvider {
+    
+    private static var riddle = Ridle.defaultRiddle()
+    
     func fetch(completion: @escaping (_ ridle: Ridle?) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-            completion(Ridle.defaultRiddle())
+            completion(RidleProvider.riddle)
         }
     }
 }

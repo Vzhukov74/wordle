@@ -20,8 +20,11 @@ final class GameViewModel: ObservableObject {
     @Published var keys: Keys
     @Published var gameState: GameState = .loading
     
+    private let initionKeys: Keys
+    
     init(riddle: Ridle, keys: Keys) {
         self.riddle = riddle
+        self.initionKeys = keys
         self.keys = keys
     }
     
@@ -93,6 +96,7 @@ final class GameViewModel: ObservableObject {
         } else {
             gameState = .play
             riddle = newRiddle
+            keys = initionKeys
         }
     }
     

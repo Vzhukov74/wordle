@@ -30,9 +30,9 @@ extension Ridle {
     }
     
     static func defaultRiddle() -> Ridle {
-        //let dateFormatter = DateFormatter()
-        //dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        let availableUntil = "2022-05-30 23:59"//dateFormatter.string(from: Date())
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let availableUntil = dateFormatter.string(from: Date()) + " 23:59"
         
         let words = ["ПРИВЕТ", "МАГНИТ", "ОБЛАКО", "МОЛОКО", "АРБУЗЫ"]
         
