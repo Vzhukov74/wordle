@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		57335F1127C51F3B0045ED5B /* CharView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57335F1027C51F3B0045ED5B /* CharView.swift */; };
-		5764BAF4281AD9230070A370 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5764BAF3281AD9230070A370 /* Shake.swift */; };
 		576B11282844DB100051F59A /* WaitingForNewRidleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B11272844DB100051F59A /* WaitingForNewRidleView.swift */; };
 		576B112B2845011F0051F59A /* HalfTransparentBg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B112A2845011F0051F59A /* HalfTransparentBg.swift */; };
 		576B112F284503AB0051F59A /* WaitingForNewRidleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B112E284503AB0051F59A /* WaitingForNewRidleViewModel.swift */; };
+		576B11332845091E0051F59A /* LastRidleIdStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B11322845091E0051F59A /* LastRidleIdStore.swift */; };
+		576B11352845093D0051F59A /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B11342845093D0051F59A /* Shake.swift */; };
 		5774A67F27A040FA00C0A64F /* wordleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5774A67E27A040FA00C0A64F /* wordleApp.swift */; };
 		5774A68127A040FA00C0A64F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5774A68027A040FA00C0A64F /* GameView.swift */; };
 		5774A68327A040FD00C0A64F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5774A68227A040FD00C0A64F /* Assets.xcassets */; };
@@ -35,10 +36,11 @@
 
 /* Begin PBXFileReference section */
 		57335F1027C51F3B0045ED5B /* CharView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharView.swift; sourceTree = "<group>"; };
-		5764BAF3281AD9230070A370 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		576B11272844DB100051F59A /* WaitingForNewRidleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingForNewRidleView.swift; sourceTree = "<group>"; };
 		576B112A2845011F0051F59A /* HalfTransparentBg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfTransparentBg.swift; sourceTree = "<group>"; };
 		576B112E284503AB0051F59A /* WaitingForNewRidleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingForNewRidleViewModel.swift; sourceTree = "<group>"; };
+		576B11322845091E0051F59A /* LastRidleIdStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastRidleIdStore.swift; sourceTree = "<group>"; };
+		576B11342845093D0051F59A /* Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		5774A67B27A040FA00C0A64F /* wordle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wordle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5774A67E27A040FA00C0A64F /* wordleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordleApp.swift; sourceTree = "<group>"; };
 		5774A68027A040FA00C0A64F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -75,7 +77,7 @@
 		5764BAF2281AD9100070A370 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				5764BAF3281AD9230070A370 /* Shake.swift */,
+				576B11342845093D0051F59A /* Shake.swift */,
 				576B112A2845011F0051F59A /* HalfTransparentBg.swift */,
 			);
 			path = Common;
@@ -170,6 +172,7 @@
 		57B6BA5F27CE58A100707184 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				576B11322845091E0051F59A /* LastRidleIdStore.swift */,
 				57B6BA6027CE58CB00707184 /* RidleProvider.swift */,
 			);
 			path = Services;
@@ -252,6 +255,7 @@
 				57B6BA4F27C522ED00707184 /* Char.swift in Sources */,
 				576B11282844DB100051F59A /* WaitingForNewRidleView.swift in Sources */,
 				5774A68F27A1991000C0A64F /* KeyboardView.swift in Sources */,
+				576B11332845091E0051F59A /* LastRidleIdStore.swift in Sources */,
 				57B6BA5E27CE4C8800707184 /* LoseMsgView.swift in Sources */,
 				57B6BA5827C7994100707184 /* KeysRow.swift in Sources */,
 				57B6BA5C27CE4C7B00707184 /* WinMsgView.swift in Sources */,
@@ -262,9 +266,9 @@
 				5774A67F27A040FA00C0A64F /* wordleApp.swift in Sources */,
 				57B6BA6327CE59FF00707184 /* ShimmerView.swift in Sources */,
 				57335F1127C51F3B0045ED5B /* CharView.swift in Sources */,
-				5764BAF4281AD9230070A370 /* Shake.swift in Sources */,
 				57B6BA5627C5289D00707184 /* GameViewModel.swift in Sources */,
 				576B112F284503AB0051F59A /* WaitingForNewRidleViewModel.swift in Sources */,
+				576B11352845093D0051F59A /* Shake.swift in Sources */,
 				57B6BA6527CE5A8400707184 /* BoardShimmerView.swift in Sources */,
 				5774A68D27A04EFD00C0A64F /* WordView.swift in Sources */,
 			);
