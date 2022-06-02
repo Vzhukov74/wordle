@@ -24,6 +24,7 @@ struct WordView: View {
 struct WordView_Previews: PreviewProvider {
     static var previews: some View {
         WordView(word: Word.previewsData)
+            .previewLayout(PreviewLayout.fixed(width: 320, height: 60))
     }
 }
 

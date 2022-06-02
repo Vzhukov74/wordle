@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  GameView.swift
 //  wordle
 //
 //  Created by v.s.zhukov on 25.01.2022.
@@ -15,7 +15,7 @@ struct GameView: View {
             ZStack {
                 GeometryReader { geo in
                     if viewModel.gameState == .loading {
-                        shimmers(width: geo.size.width)
+                        EmptyView()
                     } else {
                         board(width: geo.size.width)
                     }
@@ -23,20 +23,11 @@ struct GameView: View {
                 
                 switch viewModel.gameState {
                 case .win:
-                    WinMsgView(onNewGame: {
-                        viewModel.onNextRiddle()
-                    })
-                    .halfTransparentBg()
+                    EmptyView()
                 case .lose:
-                    LoseMsgView(word: viewModel.riddle.answer, onNewGame: {
-                        viewModel.onNextRiddle()
-                    })
-                    .halfTransparentBg()
+                    EmptyView()
                 case .waitingForNewRidle:
-                    WaitingForNewRidleView(
-                        viewModel: viewModel.waitingForNewRidleViewModel
-                    )
-                        .halfTransparentBg()
+                    EmptyView()
                 default: EmptyView()
                 }
             }
@@ -44,17 +35,6 @@ struct GameView: View {
             .onAppear {
                 viewModel.load()
             }
-    }
-    
-    private func shimmers(width: CGFloat) -> some View {
-        VStack {
-            BoardShimmerView()
-                .padding(.horizontal, 26)
-            Spacer(minLength: 0)
-            KeyboardShimmerView(keys: viewModel.keys,
-                                width: width - 8)
-                .padding(.horizontal, 4)
-        }.padding(.vertical, 16)
     }
     
     private func board(width: CGFloat) -> some View {

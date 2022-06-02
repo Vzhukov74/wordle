@@ -29,13 +29,13 @@ struct CharView: View {
 struct CharView_Previews: PreviewProvider {
     static var previews: some View {
         CharView(char: Char(title: "F", highlight: .correct))
-            .previewLayout(PreviewLayout.fixed(width: 100, height: 100))
+            .previewLayout(PreviewLayout.fixed(width: 60, height: 60))
         CharView(char: Char(title: "F", highlight: .wrong))
-            .previewLayout(PreviewLayout.fixed(width: 100, height: 100))
+            .previewLayout(PreviewLayout.fixed(width: 60, height: 60))
         CharView(char: Char(title: "F", highlight: .wrongPlace))
-            .previewLayout(PreviewLayout.fixed(width: 100, height: 100))
+            .previewLayout(PreviewLayout.fixed(width: 60, height: 60))
         CharView(char: Char(title: "", highlight: .none))
-            .previewLayout(PreviewLayout.fixed(width: 100, height: 100))
+            .previewLayout(PreviewLayout.fixed(width: 60, height: 60))
     }
 }
 

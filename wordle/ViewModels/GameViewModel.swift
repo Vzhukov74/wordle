@@ -136,6 +136,7 @@ final class GameViewModel: ObservableObject {
     }
     
     private func goToNextTry() {
+        riddle.words[riddle.currentWordIndex].wrongAnswerCounter += 1
         riddle.currentWordIndex = riddle.currentWordIndex + 1
         riddle.currentCharIndex = 0
     }

@@ -22,5 +22,6 @@ struct BoardView: View {
 struct BoardView_Previews: PreviewProvider {
     static var previews: some View {
         BoardView(words: Array(repeating: Word.previewsData, count: 6))
+            .padding()
     }
 }
