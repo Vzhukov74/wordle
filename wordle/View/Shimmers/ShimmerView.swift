@@ -37,5 +37,6 @@ struct ShimmerView: View {
 struct ShimmerView_Previews: PreviewProvider {
     static var previews: some View {
         ShimmerView()
+            .previewLayout(PreviewLayout.fixed(width: 60, height: 60))
     }
 }

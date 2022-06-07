@@ -50,4 +50,9 @@ class WaitingForNewRidleViewModel: ObservableObject {
         
         self.availableAfter = availableAfterStr
     }
+    
+    deinit {
+        timer?.invalidate()
+        timer = nil
+    }
 }
